@@ -1,0 +1,24 @@
+{
+  "name": "serverlessdays-virtual-new",
+  "version": "0.0.1",
+  "description": "New ServerlessDays Virtual Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ServerlessDays/serverlessdays-virtual-new.git"
+  },
+  "keywords": [],
+  "author": "Ant Stanley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ServerlessDays/serverlessdays-virtual-new/issues"
+  },
+  "homepage": "https://github.com/ServerlessDays/serverlessdays-virtual-new#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
