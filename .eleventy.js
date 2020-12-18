@@ -6,24 +6,9 @@ const { JSDOM } = require('jsdom')
 const fs = require('fs')
 const CleanCSS = require('clean-css')
 const pluginRSS = require('@11ty/eleventy-plugin-rss')
-const ghostContentAPI = require('@tryghost/content-api')
 
-const api = new ghostContentAPI({
-  url: process.env.GHOST_API_URL,
-  key: process.env.GHOST_CONTENT_API_KEY,
-  version: 'v2'
-})
-
-// Strip Ghost domain from urls
-const stripDomain = url => {
-  return url.replace(process.env.GHOST_API_URL, '')
-}
-
-const cssFiles = [
-  './src/_includes/css/theme.css',
-  './src/_includes/css/content.css',
-  './src/_includes/css/kg.css'
-]
+// add relative paths to all used css files here
+const cssFiles = ['./src/_includes/css/theme.css']
 
 const cleanCSSOptions = {
   level: {
@@ -111,176 +96,26 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toISOString().split('T')[0]
   })
 
-  eleventyConfig.addCollection('pages', async function (collection) {
-    collection = await api.pages
-      .browse({
-        include: 'authors',
-        limit: 'all'
-      })
-      .catch(err => {
-        console.error(err)
-      })
-
-    collection.map(page => {
-      page.url = stripDomain(page.url)
-      page.primary_author.url = stripDomain(page.primary_author.url)
-      page.authors = page.authors.map(author => {
-        author.url = stripDomain(author.url)
-        return author
-      })
-
-      // Convert publish date into a Date object
-      page.published_at = new Date(page.published_at)
-      page.date = new Date(page.published_at)
-      return page
-    })
-
+  // create collections
+  eleventyConfig.addCollection('talks', async function (collection) {
     return collection
   })
 
-  // Get all posts
-  eleventyConfig.addCollection('posts', async function (collection) {
-    collection = await api.posts
-      .browse({
-        include: 'tags,authors',
-        limit: 'all'
-      })
-      .catch(err => {
-        console.error(err)
-      })
-
-    collection.forEach(post => {
-      post.url = stripDomain(post.url)
-      post.primary_author.url = stripDomain(post.primary_author.url)
-      post.authors = post.authors.map(author => {
-        author.url = stripDomain(author.url)
-        return author
-      })
-      post.tags.map(tag => (tag.url = stripDomain(tag.url)))
-
-      // Convert publish date into a Date object
-      post.published_at = new Date(post.published_at)
-    })
-
-    // Bring featured post to the top of the list
-    collection.sort((post, nextPost) => nextPost.featured - post.featured)
-
+  // Get all speakers
+  eleventyConfig.addCollection('speakers', async function (collection) {
     return collection
   })
 
-  eleventyConfig.addCollection('featured', async function (collection) {
-    collection = await api.posts
-      .browse({
-        include: 'tags,authors',
-        limit: 'all',
-        featured: true
-      })
-      .catch(err => {
-        console.error(err)
-      })
-
-    collection.forEach(post => {
-      post.url = stripDomain(post.url)
-      post.primary_author.url = stripDomain(post.primary_author.url)
-      post.authors = post.authors.map(author => {
-        author.url = stripDomain(author.url)
-        return author
-      })
-      post.tags.map(tag => (tag.url = stripDomain(tag.url)))
-
-      // Convert publish date into a Date object
-      post.published_at = new Date(post.published_at)
-    })
-
-    // Bring featured post to the top of the list
-    collection.sort((post, nextPost) => nextPost.featured - post.featured)
-
-    return collection
-  })
-
-  // Get all authors
-  eleventyConfig.addCollection('authors', async function (collection) {
-    collection = await api.authors
-      .browse({
-        limit: 'all'
-      })
-      .catch(err => {
-        console.error(err)
-      })
-
-    // Get all posts with their authors attached
-    const posts = await api.posts
-      .browse({
-        include: 'authors',
-        limit: 'all'
-      })
-      .catch(err => {
-        console.error(err)
-      })
-
-    // Attach posts to their respective authors
-    collection.forEach(async author => {
-      const authorsPosts = posts.filter(post => {
-        post.url = stripDomain(post.url)
-        return post.primary_author.id === author.id
-      })
-      if (authorsPosts.length) author.posts = authorsPosts
-
-      author.url = stripDomain(author.url)
-    })
-
-    return collection
-  })
-
-  // Get all tags
-  eleventyConfig.addCollection('tags', async function (collection) {
-    collection = await api.tags
-      .browse({
-        include: 'count.posts',
-        limit: 'all'
-      })
-      .catch(err => {
-        console.error(err)
-      })
-
-    // Get all posts with their tags attached
-    const posts = await api.posts
-      .browse({
-        include: 'tags,authors',
-        limit: 'all'
-      })
-      .catch(err => {
-        console.error(err)
-      })
-
-    // Attach posts to their respective tags
-    collection.forEach(async tag => {
-      const taggedPosts = posts.filter(post => {
-        post.url = stripDomain(post.url)
-        post.primary_author.url = stripDomain(post.primary_author.url)
-        if (post.authors) {
-          post.authors.forEach(postAuthor => {
-            postAuthor.url = stripDomain(postAuthor.url)
-          })
-        }
-        const tagExists = post.tags.filter(tagSlug => {
-          return tagSlug.slug === tag.slug
-        })
-        return tagExists.length ? tagExists.length > 0 : false
-      })
-      if (taggedPosts.length) tag.posts = taggedPosts
-
-      tag.url = stripDomain(tag.url)
-    })
-
+  // past and current events
+  eleventyConfig.addCollection('events', async function (collection) {
     return collection
   })
 
   return {
     passthroughFileCopy: true,
     dir: {
-      input: 'src',
-      output: 'dist'
+      input: 'src/web',
+      output: 'dist/web'
     },
     markdownTemplateEngine: 'njk'
   }
