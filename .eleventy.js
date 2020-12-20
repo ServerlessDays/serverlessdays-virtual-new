@@ -8,7 +8,7 @@ const CleanCSS = require('clean-css')
 const pluginRSS = require('@11ty/eleventy-plugin-rss')
 
 // add relative paths to all used css files here
-const cssFiles = ['./src/_includes/css/theme.css']
+const cssFiles = ['src/web/_includes/css/theme.css']
 
 const cleanCSSOptions = {
   level: {
@@ -108,6 +108,14 @@ module.exports = function (eleventyConfig) {
 
   // past and current events
   eleventyConfig.addCollection('events', async function (collection) {
+    return collection
+  })
+
+  eleventyConfig.addCollection('posts', async function (collection) {
+    return collection
+  })
+
+  eleventyConfig.addCollection('authors', async function (collection) {
     return collection
   })
 

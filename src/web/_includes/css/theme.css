@@ -7,7 +7,7 @@
 }
 
 .fg-base {
-  color: #000060;
+  color: #000010;
 }
 
 .default-font {
@@ -24,7 +24,7 @@
 
 @media (prefers-color-scheme: dark) {
   .bg-base {
-    background-color: #000060;
+    background-color: #000010;
   }
 
   .fg-base {

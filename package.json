@@ -9,7 +9,7 @@
     "build": "eleventy",
     "bundle": "node src/build/index.js",
     "debug": "DEBUG=Eleventy* dotenv -- eleventy",
-    "publish": "cd dist/functions/api && wrangler publish",
+    "publish": "npm run bundle && cd dist/functions/api && wrangler publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,6 +32,7 @@
     "esbuild": "^0.8.23",
     "graphql-tag": "^2.11.0",
     "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.1",
     "postcss": "^8.2.1",
     "tailwindcss": "^2.0.2"
   }

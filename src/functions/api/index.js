@@ -12,7 +12,7 @@ async function handleRequest (request) {
   }
 
   let body = ''
-  let status = 400
+  let status = 200
   if (request.method === 'GET' || request.method === 'POST') {
     const response = await server(request)
     if (response.body) {
@@ -30,5 +30,5 @@ async function handleRequest (request) {
     }
   }
 
-  return new Response(JSON.stringify(body), { headers })
+  return new Response(JSON.stringify(body), { headers, status })
 }
