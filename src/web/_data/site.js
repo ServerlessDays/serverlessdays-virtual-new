@@ -5,7 +5,7 @@ const apiUrl = process.env['API_URL']
 const fetchSite = async () => {
   const body = JSON.stringify({
     query:
-      'query getSite ($siteId: String) { site (siteId: $siteId) { title url } }',
+      'query getSite ($siteId: String) { site (siteId: $siteId) { title url description twitter image { src alt } } }',
     variables: {
       siteId: 'ServerlessDaysVirtual'
     }
@@ -20,13 +20,11 @@ const fetchSite = async () => {
   if (response.ok) {
     const responseBody = await response.json()
     const { site } = responseBody.data
-    console.log(site)
+    // console.log(site)
     return site
   } else {
     return null
   }
 }
 
-// export default fetchSite
-
-fetchSite()
+module.exports = fetchSite

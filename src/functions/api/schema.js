@@ -1,4 +1,9 @@
 const schema = `
+  type Image {
+    src: String
+    alt: String
+  }
+
   type Site {
     title: String
     url: String
@@ -6,6 +11,8 @@ const schema = `
     lang: String
     cover_image: String
     icon: String
+    twitter: String
+    image: Image
   }
 
   type Query {

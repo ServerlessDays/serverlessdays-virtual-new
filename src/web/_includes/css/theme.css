@@ -1,6 +1,6 @@
 @tailwind base;
-
 @tailwind components;
+@tailwind utilities;
 
 .bg-base {
   background-color: #eeeef0;
@@ -20,6 +20,16 @@
 
 .quote-font {
   font-family: 'Lucida Console', Monaco, monospace;
+}
+
+.hero-clip-top {
+  -webkit-clip-path: polygon(100% 100%, 100% 0, 100% 0, 0 100%);
+  clip-path: polygon(100% 100%, 100% 0, 100% 0, 0 100%);
+}
+
+.hero-clip-btm {
+  -webkit-clip-path: polygon(100% 0%, 100% 0, 0% 0, 0% 100%);
+  clip-path: polygon(100% 0%, 100% 0, 0% 0, 0% 100%);
 }
 
 @media (prefers-color-scheme: dark) {
