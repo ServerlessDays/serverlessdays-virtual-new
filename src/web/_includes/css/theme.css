@@ -10,6 +10,18 @@
   color: #000010;
 }
 
+.bg-inverse {
+  background-color: #000010;
+}
+
+.fg-inverse {
+  color: #eeeef0;
+}
+
+.shadow-1 {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 .default-font {
   font-family: 'avenir next', avenir, sans-serif;
 }
@@ -39,5 +51,13 @@
 
   .fg-base {
     color: #eeeef0;
+  }
+
+  .bg-inverse {
+    background-color: #eeeef0;
+  }
+
+  .fg-inverse {
+    color: #000010;
   }
 }

@@ -1,20 +1,10 @@
-<div class="mx-auto container z-30 relative">
-    <div class="mt-16">
+<div class="mt-16 mx-auto container">
+    <div>
         <img class="p-8" src="{{ site.image.src }}" alt="{{site.image.alt}}" />
     </div>
-</div>
-
-<div class="w-full -mt-28 z-10">
-    <div class="hero-clip-top w-full bg-white h-16">
-
-    </div>
-    <div class="w-full bg-white h-48">
-
-        <div class="mx-auto container text-center">
-            <button class="py-4 px-8 bg-green-800 text-gray-50 font-medium text-lg rounded-lg border-transparent shadow-2xl" type="submit" >Submit to CFP</button>
-        </div>
-    </div>
-    <div class="hero-clip-btm w-full bg-white h-16">
-
+    <div class="float-none lg:float-right xl:float-right 2xl:float-right w-auto lg:w-1/2 xl:w-1/2 2xl:w-1/2 mx-4">
+        {% include "partials/eventDetails.njk" %}
     </div>
 </div>
+
+
