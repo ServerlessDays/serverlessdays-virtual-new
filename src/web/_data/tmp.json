@@ -1,0 +1,45 @@
+{
+  "date": "28 February 2021",
+  "startTimes": "10am PST / 1pm EST / 6pm GMT / 7pm CET",
+  "live": true,
+  "current": true,
+  "timeline": [
+    { "milestone": "CFP Opens", "date": "4 January 2021" },
+    { "milestone": "CFP Closes", "date": "1 February 2021" },
+    { "milestone": "Speakers notified", "date": "8 February 2021" },
+    { "milestone": "Speakers announced", "date": "11 February 2021" },
+    {
+      "milestone": "ServerlessDays Virtual 4th Edition!",
+      "date": "28 February 2021"
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Thundra",
+      "logo": {
+        "src": "https://res.cloudinary.com/serverlessdays/image/upload/v1609113499/Virtual/sponsors/Thundra-Logo-New.svg",
+        "alt": "Thundra Logo"
+      },
+      "url": "https://thundra.io",
+      "tier": "none"
+    },
+    {
+      "name": "Stackery",
+      "logo": {
+        "src": "https://res.cloudinary.com/serverlessdays/image/upload/v1609113477/Virtual/sponsors/stackery-logo.svg",
+        "alt": "Stackery Logo"
+      },
+      "url": "https://stackery.io",
+      "tier": "none"
+    },
+    {
+      "name": "Senzo",
+      "logo": {
+        "src": "https://res.cloudinary.com/serverlessdays/image/upload/v1609113633/Virtual/sponsors/senzo_vector.svg",
+        "alt": "Senzo Logo"
+      },
+      "url": "https://senzo.io",
+      "tier": "none"
+    }
+  ]
+}
