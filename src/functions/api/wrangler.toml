@@ -1,7 +1,0 @@
-name = "api"
-type = "javascript"
-account_id = "10548b62572a1f4ddf8e719f35b710df"
-workers_dev = true
-route = ""
-zone_id = ""
-kv_namespaces=[{ binding = "SITEKV", id = "4337b03630da462198a0e6a1700537f1", preview_id = "60582cd5f01044389c3cc075a121d30c" }]
