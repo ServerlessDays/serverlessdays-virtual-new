@@ -1,48 +1,46 @@
 {
-  "name": "gatsby-strapi-starter",
+  "name": "serverlessdays-virtual",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "One day, one track, one community",
   "version": "0.1.0",
-  "author": "Jeremy Lynch",
+  "author": "ServerlessDays Virtual",
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.0",
     "gatsby": "^3.0.0",
-    "gatsby-image": "^2.8.0",
+    "gatsby-image": "^3.0.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-facebook-pixel": "^1.0.5",
     "gatsby-plugin-google-tagmanager": "^3.0.0",
-    "gatsby-plugin-manifest": "^3.0.0",
     "gatsby-plugin-netlify": "^3.0.0",
     "gatsby-plugin-offline": "^4.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sass": "^4.0.0",
-    "gatsby-plugin-sharp": "3.0.0",
+    "gatsby-plugin-sharp": "^3.0.0",
     "gatsby-plugin-sitemap": "^3.0.0",
     "gatsby-plugin-styled-components": "^4.0.0",
     "gatsby-source-filesystem": "^3.0.0",
-    "gatsby-transformer-sharp": "3.0.0",
+    "gatsby-transformer-sharp": "^3.0.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "react-helmet": "^5.2.1",
-    "react-icons": "^3.11.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
     "react-is": "^17.0.1",
     "react-number-format": "^4.4.4",
-    "react-slick": "^0.28.0",
-    "reactstrap": "^8.8.1",
+    "react-slick": "^0.28.1",
+    "reactstrap": "^8.9.0",
     "reactstrap-form-fields": "^1.0.8",
-    "slick-carousel": "^1.8.1",
     "smooth-scroll": "^16.1.3",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^2.2.1"
   },
   "keywords": [
-    "gatsby"
+    "serverlessdays"
   ],
   "license": "MIT",
   "scripts": {
@@ -55,7 +53,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ServerlessDays/serverlessdays-virtual-new"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

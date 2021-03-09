@@ -34,12 +34,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        icon: './src/assets/images/favicon.ico'
-      },
-    },
-    {
       resolve: 'gatsby-plugin-anchor-links',
       options: {
         offset: 0
