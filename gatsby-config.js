@@ -3,14 +3,11 @@ let gtm = '1234'
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Landing Page Starter`,
-    description: `A slightly opinionated Gatsby Landing Page starter template. `,
-    author: `Jeremy Lynch`,
-    siteUrl: `https://gatsby-strapi-starter.netlify.com/`,
-    phone: '1800123456',
-    fax: '180012345',
-    address: '123 fake street',
-    email: 'contact@test.com'
+    title: `ServerlessDays Virtual`,
+    description: `ServerlessDays goes Virtual! Join us as we take ServerlessDays online so you can enjoy it from wherever you may be!`,
+    author: `ServerlessDays Virtual`,
+    siteUrl: `https://virtual.serverlessdays.io/`,
+    email: 'info@serverlessdays.io'
 
   },
   plugins: [
@@ -39,8 +36,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: './src/assets/images/gatsby-icon.png'
+        icon: './src/assets/images/favicon.ico'
       },
+    },
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: 0
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

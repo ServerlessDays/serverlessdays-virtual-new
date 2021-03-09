@@ -64,6 +64,21 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: #8C5AFB;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #21153B;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #8C5AFB;
+}
+
 h1 {
   font-family: "HKGrotesk";
   font-weight: 500
@@ -79,4 +94,8 @@ p {
 .bg-primary-faded {
   color: $primary;
   background-color: rgba(red($primary), green($primary), blue($primary), 0.2);
+}
+
+.navbar-dark {
+  background: #8C5AFB !important;
 }

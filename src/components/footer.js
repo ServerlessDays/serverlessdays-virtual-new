@@ -2,12 +2,12 @@ import React from 'react'
 import {Container, Row, Col} from 'reactstrap'
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 import Link from './link';
-import styled from "styled-components"
+import styled from 'styled-components'
 import footerItems from '../data/footer.json'
 
 const FooterStyling = styled.footer`
   padding: 3rem 0;
-  background: #f8f9fa;
+  background: ${props => props.theme.gray};
   a, a:hover {
     color: inherit;
   }
@@ -25,7 +25,7 @@ const FooterStyling = styled.footer`
 `
 
 let SocialLink = ({Icon}) => (
-  <Link to="/" className="mr-2">
+  <Link to='/' className='mr-2'>
     <Icon size={30}/>
   </Link>
 )

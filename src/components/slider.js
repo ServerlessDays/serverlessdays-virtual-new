@@ -1,7 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
+import React from 'react';
+import Slider from 'react-slick';
+import { useStaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
@@ -37,19 +37,19 @@ let SlickSlider = () => {
     <SliderContainer>
       <Slider {...settings}>
         <div>
-          <div className="text-center">
+          <div className='text-center'>
             <h1>{title}</h1>
             <p>By {author}</p>
           </div>
         </div>
         <div>
-          <div className="text-center">
+          <div className='text-center'>
             <h1>{title}</h1>
             <p>By {author}</p>
           </div>
         </div>
         <div>
-          <div className="text-center">
+          <div className='text-center'>
             <h1>{title}</h1>
             <p>By {author}</p>
           </div>

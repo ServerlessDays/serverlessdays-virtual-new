@@ -1,17 +1,16 @@
 [
-  {"name": "Home", "url": "", "dropdownItems": [
+  {"name": "Home", "url": "/", "dropdownItems": [
     {"name": "About", "url": "/about"},
-    {"name": "Contact", "url": "/contact"},
-    {"name": "Features", "url": "/test"}
+    {"name": "Speakers", "url": "#speakers"},
+    {"name": "Schedule", "url": "#schedule"}
   ]},
-  {"name": "Services", "url": "", "dropdownItems": [
-    {"name": "Features", "url": "/test"},
-    {"name": "Features", "url": "/test"},
-    {"name": "Features", "url": "/test"}
+  {"name": "Past Events", "url": "", "dropdownItems": [
+    {"name": "Link", "url": "/"},
+    {"name": "Link", "url": "/"},
+    {"name": "Link", "url": "/"}
   ]},
-  {"name": "Company", "url": "", "dropdownItems": [
-    {"name": "Features", "url": "/test"},
-    {"name": "Features", "url": "/test"},
-    {"name": "Features", "url": "/test"}
+  {"name": "ServerlessDays", "url": "", "dropdownItems": [
+    {"name": "Main site", "url": "https://serverlessdays.io/"},
+    {"name": "Code of Conduct", "url": "/code"}
   ]}
 ]
