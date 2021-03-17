@@ -12,9 +12,11 @@ const Index = () => (
     <SEO title='ServerlessDays Virtual Home' />
     <Header />
     <Social />
+    {/*
     <Speakers/>
     <Schedule/>
     <Sponsors/>
+    */}
   </Layout>
 );
 

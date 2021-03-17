@@ -7,7 +7,7 @@ import dino from '../assets/images/dinoMascot.png';
 
 const Wrapper = styled.div`
   background: ${props => props.theme.violet};
-  min-height: 90vh;
+  min-height: 100vh;
   padding-top: 4rem;
   width: 100%;
   h1, h2, h3 {
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   }
 `
 let StyledEvent = styled.div`
-  background: ${props => props.theme.violet};
+  background: ${props => props.theme.dark};
   margin-top: 2rem;
   padding: 2rem;
   min-height: 250px;

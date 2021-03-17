@@ -1,6 +1,6 @@
 import React from 'react'
 import {Container, Row, Col} from 'reactstrap'
-import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
 import Link from './link';
 import styled from 'styled-components'
 import footerItems from '../data/footer.json'
@@ -24,8 +24,8 @@ const FooterStyling = styled.footer`
   }
 `
 
-let SocialLink = ({Icon}) => (
-  <Link to='/' className='mr-2'>
+let SocialLink = ({ Icon, href }) => (
+  <Link href={href} className='mr-2' target='_blank'>
     <Icon size={30}/>
   </Link>
 )
@@ -52,10 +52,10 @@ let Footer = () => (
             </ul>
           </Col>
         ))}
+        <Col xs={12} md={3}></Col>
         <Col xs={12} md={3}>
           <h5>Contact Us</h5>
-          <SocialLink Icon={FaFacebookSquare}/>
-          <SocialLink Icon={FaInstagram}/>
+          <SocialLink Icon={FaTwitter} href='https://twitter.com/ServerlessdaysV' />
         </Col>
       </Row>
     </Container>
