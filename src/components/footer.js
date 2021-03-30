@@ -1,6 +1,6 @@
 import React from 'react'
 import {Container, Row, Col} from 'reactstrap'
-import { FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaTwitter } from 'react-icons/fa';
 import Link from './link';
 import styled from 'styled-components'
 import footerItems from '../data/footer.json'
@@ -22,10 +22,13 @@ const FooterStyling = styled.footer`
       }
     }
   }
+  .iconLink {
+    color: ${props => props.theme.dark}
+  }
 `
 
 let SocialLink = ({ Icon, href }) => (
-  <Link href={href} className='mr-2' target='_blank'>
+  <Link href={href} className='mr-2 iconLink' target='_blank'>
     <Icon size={30}/>
   </Link>
 )
@@ -56,6 +59,7 @@ let Footer = () => (
         <Col xs={12} md={3}>
           <h5>Contact Us</h5>
           <SocialLink Icon={FaTwitter} href='https://twitter.com/ServerlessdaysV' />
+          <SocialLink Icon={FaEnvelope} href='mailto:hello@serverlessdays.io' />
         </Col>
       </Row>
     </Container>
