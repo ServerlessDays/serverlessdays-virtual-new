@@ -1,0 +1,12 @@
+[
+  {"name": "Home", "url": "/", "dropdownItems": [
+    {"name": "About", "url": "/#about"},
+    {"name": "Speakers", "url": "/"},
+    {"name": "Schedule", "url": "/"}
+  ]},
+  {"name": "ServerlessDays", "url": "", "dropdownItems": [
+    {"name": "Main site", "url": "https://serverlessdays.io/"},
+    {"name": "Code of Conduct", "url": "/code"},
+    {"name": "Privacy Policy", "url": "/privacy"}
+  ]}
+]
