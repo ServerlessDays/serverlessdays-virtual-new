@@ -8,7 +8,6 @@ module.exports = {
     author: `ServerlessDays Virtual`,
     siteUrl: `https://virtual.serverlessdays.io/`,
     email: 'info@serverlessdays.io'
-
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,8 +16,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
+        path: `${__dirname}/src/assets/images`
+      }
     },
     {
       resolve: 'gatsby-plugin-google-tagmanager',
@@ -30,7 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: facebook_pixel,
+        pixelId: facebook_pixel
       }
     },
     {
@@ -38,7 +37,8 @@ module.exports = {
       options: {
         offset: 0
       }
-    },  {
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         // Defaults used for gatsbyImageData and StaticImage
@@ -48,7 +48,7 @@ module.exports = {
         // deprecated options and their defaults:
         base64Width: 20,
         useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`
-      },
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
@@ -56,4 +56,7 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-styled-components`
   ],
+  flags: {
+    DEV_SSR: false
+  }
 }
